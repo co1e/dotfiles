@@ -9,4 +9,4 @@ Scripts to bootstrap the installation and set up of a new computer.
 Configuration files for apps I use.
 
 ## Installation
-TBD
+Script must be run as administrator
