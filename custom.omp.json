@@ -7,9 +7,8 @@
         {
           "background": "#6272a4",
           "foreground": "#ffffff",
-          "leading_diamond": "\ue0b6",
-          "style": "diamond",
-          "template": "{{ .UserName }} ",
+          "style": "plain",
+          "template": " {{ .UserName }} ",
           "type": "session"
         },
         {
@@ -19,22 +18,22 @@
           "properties": {
             "style": "full"
           },
-          "style": "powerline",
+          "style": "plain",
           "template": " {{ .Path }} ",
           "type": "path"
         },
         {
           "background": "#ffb86c",
           "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
+          "powerline_symbol": "",
           "properties": {
-            "branch_icon": "",
+            "branch_icon": "\ue725 ",
             "fetch_stash_count": true,
             "fetch_status": false,
             "fetch_upstream_icon": true
           },
           "style": "powerline",
-          "template": " \u279c ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}) ",
+          "template": " \uf09b ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}) ",
           "type": "git"
         },
         {
@@ -52,9 +51,29 @@
             "time_format": "15:04"
           },
           "style": "diamond",
-          "template": " \u266F {{ .CurrentDate | date .Format }} ",
-          "trailing_diamond": "\ue0b0",
+          "template": " \uf608 {{ .CurrentDate | date .Format }} ",
+          "trailing_diamond": "",
           "type": "time"
+        }
+      ],
+      "type": "prompt",
+      "newline": true
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#cd5e42",
+          "style": "plain",
+          "template": "\ue3bf ",
+          "type": "root"
+        },
+        {
+          "foreground": "#ff79c6",
+          "style": "plain",
+          "template": "#",
+          "type": "text"
         }
       ],
       "type": "prompt"

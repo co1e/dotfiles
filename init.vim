@@ -1,6 +1,8 @@
+set path+=**
 """ enable syntax highlighting and filetype highlighting
 syntax on
 filetype on
+"filetype plugin on
 """ begin 'normal' settings
 set exrc
 set relativenumber
@@ -25,20 +27,22 @@ set smartindent
 set cmdheight=2
 set colorcolumn=82
 set updatetime=50
-
+set wildmode=longest,list,full
+set wildmenu
 set shortmess+=c
 
 """ load plugins (use :PlugInstall)
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'neovim/nvim-lspconfig'
 Plug 'dracula/vim',{'as':'dracula'}
 call plug#end()
 """ end load plugins
 """ leader directives
 nnoremap <leader>dd :Lexplore %:p:h<CR>
 nnoremap <leader>da :Lexplore<CR>
-
+nnoremap <leader>pv :E<CR>
 """ NetRW (explore) remapping
 function! NetrwMapping()
     nmap <buffer> H u
