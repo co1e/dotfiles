@@ -30,19 +30,40 @@ set updatetime=50
 set wildmode=longest,list,full
 set wildmenu
 set shortmess+=c
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
 
-""" load plugins (use :PlugInstall)
+""" use :PlugInstall
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" telescope and telescope deps
+Plug 'nvim-lua/plenary.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'mbbill/undotree'
+" lsp plugins
 Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'onsails/lspkind-nvim'
+Plug 'nvim-lua/lsp_extensions.nvim'
+" theme stuff
 Plug 'dracula/vim',{'as':'dracula'}
 call plug#end()
-""" end load plugins
+
 """ leader directives
 nnoremap <leader>dd :Lexplore %:p:h<CR>
 nnoremap <leader>da :Lexplore<CR>
 nnoremap <leader>pv :E<CR>
+""" telescope remaps
+nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
+nnoremap <C-p> :lua require('telescope.builtin').git_files()<CR>
+nnoremap <Leader>pf :lua require('telescope.builtin').find_files()<CR>
+nnoremap <leader>pb :lua require('telescope.builtin').buffers()<CR>
+nnoremap <leader>vh :lua require('telescope.builtin').help_tags()<CR>
 """ NetRW (explore) remapping
 function! NetrwMapping()
     nmap <buffer> H u
