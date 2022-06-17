@@ -39,8 +39,8 @@
         {
           "background": "#8be9fd",
           "foreground": "#ffffff",
-          "powerline_symbol": "\ue0b0",
-          "style": "powerline",
+          //"powerline_symbol": "\ue0b0",
+          "style": "plain",
           "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "type": "node"
         },
