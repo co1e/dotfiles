@@ -5,15 +5,15 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#6272a4",
-          "foreground": "#ffffff",
+          "background": "#cc241d",
+          "foreground": "#fbf1c7",
           "style": "plain",
           "template": " {{ .UserName }} ",
           "type": "session"
         },
         {
-          "background": "#bd93f9",
-          "foreground": "#ffffff",
+          "background": "#98971a",
+          "foreground": "#fbf1c7",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "style": "full"
@@ -23,8 +23,8 @@
           "type": "path"
         },
         {
-          "background": "#ffb86c",
-          "foreground": "#ffffff",
+          "background": "#d79921",
+          "foreground": "#fbf1c7",
           "powerline_symbol": "",
           "properties": {
             "branch_icon": "\ue725 ",
@@ -37,20 +37,20 @@
           "type": "git"
         },
         {
-          "background": "#8be9fd",
-          "foreground": "#ffffff",
+          "background": "#458588",
+          "foreground": "#fbf1c7",
           //"powerline_symbol": "\ue0b0",
           "style": "plain",
           "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "type": "node"
         },
         {
-          "background": "#ff79c6",
-          "foreground": "#ffffff",
+          "background": "#b16286",
+          "foreground": "#fbf1c7",
           "properties": {
             "time_format": "15:04"
           },
-          "style": "diamond",
+          "style": "plain",
           "template": " \uf608 {{ .CurrentDate | date .Format }} ",
           "trailing_diamond": "",
           "type": "time"
@@ -70,7 +70,7 @@
           "type": "root"
         },
         {
-          "foreground": "#ff79c6",
+          "foreground": "#b16286",
           "style": "plain",
           "template": "#",
           "type": "text"

@@ -73,6 +73,7 @@ Plug 'sbdchd/neoformat'
 
 " theme stuff
 Plug 'dracula/vim',{'as':'dracula'}
+Plug 'gruvbox-community/gruvbox',{'as':'gruvbox'}
 
 call plug#end()
 
@@ -95,7 +96,7 @@ let loaded_matchparen = 1
 "let mapleader = " "
 
 """ Color settings
-colorscheme dracula
+colorscheme gruvbox
 highlight Normal guibg=None
 highlight Visual guibg='Purple'
 
