@@ -5,26 +5,27 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#cc241d",
-          "foreground": "#fbf1c7",
+          "foreground": "#fb4934",
+          // "foreground": "#fbf1c7",
           "style": "plain",
-          "template": " {{ .UserName }} ",
+          "template": " \uf505 {{ .UserName }}@{{ .HostName }} ",
+         // "template": " \{{ .HostName }} ",
           "type": "session"
         },
         {
-          "background": "#98971a",
-          "foreground": "#fbf1c7",
+          "foreground": "#98971a",
+          // "foreground": "#fbf1c7",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "style": "full"
           },
           "style": "plain",
-          "template": " {{ .Path }} ",
+          "template": " \uf752 {{ .Path }} ",
           "type": "path"
         },
         {
-          "background": "#d79921",
-          "foreground": "#fbf1c7",
+          "foreground": "#d79921",
+          //"foreground": "#fbf1c7",
           "powerline_symbol": "",
           "properties": {
             "branch_icon": "\ue725 ",
@@ -37,45 +38,65 @@
           "type": "git"
         },
         {
-          "background": "#458588",
-          "foreground": "#fbf1c7",
+          "foreground": "#458588",
+          // "foreground": "#fbf1c7",
           //"powerline_symbol": "\ue0b0",
           "style": "plain",
           "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "type": "node"
         },
         {
-          "background": "#b16286",
+          "foreground": "#458588",
+          //"foreground": "#fbf1c7",
+          "style": "plain",
+          "template": " \ue627 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "type": "go" 
+        },
+        {
+          "foreground": "#458588",
+          //"foreground": "#fbf1c7",
+          "style": "plain",
+          "template": " \uf820 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "type": "python" 
+        }
+        ],
+      "type": "prompt",
+      "newline": false 
+    },
+    {
+      "alignment": "right",
+      "newline": false,
+      "segments": [
+        {
           "foreground": "#fbf1c7",
           "properties": {
-            "time_format": "15:04"
+            "time_format": "2006-01-02 @ 3:04 PM"
           },
           "style": "plain",
-          "template": " \uf608 {{ .CurrentDate | date .Format }} ",
+          "template": " \uf5ef {{ .CurrentDate | date .Format }} ",
           "trailing_diamond": "",
           "type": "time"
         }
-      ],
-      "type": "prompt",
-      "newline": true
+     ],
+      "type": "prompt"
     },
     {
-      "alignment": "left",
-      "newline": true,
-      "segments": [
-        {
+        "alignment": "left",
+        "newline": true,
+        "segments": [
+         {
           "foreground": "#cd5e42",
           "style": "plain",
-          "template": "\ue3bf ",
+          "template": " \ue3bf ",
           "type": "root"
         },
         {
-          "foreground": "#b16286",
+          "foreground": "#fe8019",
           "style": "plain",
-          "template": "#",
+          "template": " \uf554 ",
           "type": "text"
         }
-      ],
+        ],
       "type": "prompt"
     }
   ],

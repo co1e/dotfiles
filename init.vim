@@ -95,8 +95,10 @@ nnoremap <leader>vh :lua require('telescope.builtin').help_tags()<CR>
 let loaded_matchparen = 1
 "let mapleader = " "
 
+"nnoremap <leader>cmp :call ColorMyPencils()<CR>
+
 """ Color settings
 colorscheme gruvbox
 highlight Normal guibg=None
-highlight Visual guibg='Purple'
+"highlight Visual guibg='Purple'
 
