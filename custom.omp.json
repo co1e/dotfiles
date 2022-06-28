@@ -38,12 +38,36 @@
           "type": "git"
         },
         {
+            "type": "session",
+            "style": "plain",
+            "foreground": "#b16286",
+            "template": "{{ if .SSHSession }}\uF817 {{ end }}"
+        },
+        {
+            // shell settings
+            "type": "shell",
+            "style": "plain",
+            "foreground": "#a89984",
+            // "template": "{{ if .Shell }}\ue7a2 {{ end }}",
+            "properties": {
+                "mapped_shell_names": {
+                    "pwsh": "\ue7a2 PS"
+                }
+            }
+        },
+        {
           "foreground": "#458588",
           // "foreground": "#fbf1c7",
           //"powerline_symbol": "\ue0b0",
           "style": "plain",
           "template": " \ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "type": "node"
+        },
+        {
+          "foreground": "#458588",
+          "style": "plain",
+          "template": " \ue7a8 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "type": "rust"
         },
         {
           "foreground": "#458588",

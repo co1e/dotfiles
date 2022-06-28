@@ -70,6 +70,8 @@ Plug 'rafamadriz/friendly-snippets'
 
 Plug 'darrikonn/vim-gofmt'
 Plug 'sbdchd/neoformat'
+" copilot
+Plug 'github/copilot.vim'
 
 " theme stuff
 Plug 'dracula/vim',{'as':'dracula'}
